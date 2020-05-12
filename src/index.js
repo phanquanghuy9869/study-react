@@ -3,13 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import SocialCard from './test-page/Social-Card';
-import SocialCardList from './test-page/Social-Card-List';
-import WeatherForecast from './test-page/WeatherForcast';
+import UI from './material/ui';
 
 ReactDOM.render(
   <React.StrictMode>
-    <WeatherForecast />
+    <UI />
   </React.StrictMode>,
   document.getElementById('root')
 );

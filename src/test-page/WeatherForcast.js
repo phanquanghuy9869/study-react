@@ -5,29 +5,7 @@ const snowIconUrl = 'https://cdn0.iconfinder.com/data/icons/cloudy-2/425/snow-51
 const clearIconUrl = 'https://cdn2.iconfinder.com/data/icons/weather-icons-8/512/day-clear-512.png';
 
 const WeatherForecast = (prop) => {
-    const data = {
-        "dt": 1486112400,
-        "temp": {
-            "day": 265.69,
-            "min": 256.55,
-            "max": 266,
-            "night": 256.55,
-            "eve": 260.09,
-            "morn": 266
-        },
-        "pressure": 1012.2,
-        "humidity": 0,
-        "weather": [{
-            "id": 600,
-            "main": "Snow",
-            "description": "light snow",
-            "icon": "13d"
-        }],
-        "speed": 7.35,
-        "deg": 24,
-        "clouds": 45,
-        "snow": 0.21
-    };
+    const data = prop.data;
 
     const getWeatherUrl = (weather) => {
         console.log(weather);
@@ -37,7 +15,7 @@ const WeatherForecast = (prop) => {
 
     const timeStampToDay = (unix_timestamp) => {
         var date = new Date(unix_timestamp * 1000);
-        return date.getUTCDay();
+        return date.toUTCString();
     }
 
     return (
